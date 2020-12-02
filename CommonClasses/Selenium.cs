@@ -11,7 +11,7 @@ namespace CommonClasses
         public static void ScrollToElement(ChromeDriver driver, string id, int scrollTimes)
         {
             Random randomValue = new Random();
-            int randomNumber = randomValue.Next(3000, 5000);  // creates a number between 3 and 6 Seconds
+            int randomNumber = randomValue.Next(5000, 9000);  // creates a number between 5 and 9 Seconds
             //var elementScroll = driver.FindElement(By.Id("menu-footer-menu"));
             var elementScroll = driver.FindElement(By.Id(id));
             Actions actions = new Actions(driver);
