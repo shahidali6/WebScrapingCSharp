@@ -7,9 +7,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace CodeSnippetCSharp
+namespace CommonClasses
 {
-    class HTMLCodeSnippet
+    public class HTMLCodeSnippet
     {
         #region RawDataSample
         public string sampleYouTubeData { get; set; } = 
@@ -34,8 +34,9 @@ namespace CodeSnippetCSharp
                  asdasd";
         #endregion
         public static string ReplaceSpecialCharacters(string input)
-        {
-            input = input.Replace("&amp;", "&");
+        {   
+               input = input.Replace("&amp;", "&");
+               input = input.Replace("â€“", "-");
             return input;
         }
         public static string RemoveHTMLTagsFromString(string input)
