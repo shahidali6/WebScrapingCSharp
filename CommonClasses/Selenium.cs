@@ -24,5 +24,17 @@ namespace CommonClasses
                 Console.WriteLine("Loop Index: [" + loopCounter+ " of " + scrollTimes + "]");
             }
         }
+        public static bool IsElementPresent(ChromeDriver driver, string by)
+        {
+            try
+            {
+                driver.FindElement(By.XPath(by));
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
     }
 }
